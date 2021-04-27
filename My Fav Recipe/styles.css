@@ -1,0 +1,132 @@
+html {
+  font-family: cambria, monospace;
+  font-size: 18px;
+}
+
+body {
+  margin-left: 6rem;
+  margin-right: 6rem;
+  text-align: justify;
+  background-color: #685a5a;
+  color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+  background-color: #30312b;
+  color: #eee9da;
+  margin: 1rem;
+  -webkit-box-shadow: 4px 8px 11px 3px #00000063;
+  box-shadow: 4px 8px 11px 3px #00000063;
+}
+
+#title {
+  font-size: 3rem;
+}
+
+nav {
+  font-size: 1.3rem;
+  padding: 2rem;
+  background-color: #30312b;
+  color: cornsilk;
+  margin: 1rem;
+  webkit-box-shadow: 4px 8px 11px 3px #00000063;
+  box-shadow: 4px 8px 11px 3px #00000063;
+}
+nav ul {
+  padding-left: 25px;
+}
+table.navbar {
+  font-size: 12pt;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+table.menu {
+  font-size: 11pt;
+  margin: 5px;
+  padding: 0px;
+}
+td.menuNormal {
+  padding: 0px;
+  color: #003399;
+  vertical-align: top;
+  background-color: #f6f6f6;
+}
+td.menuHover {
+  padding: 0px;
+  color: #003399;
+  width: 112px;
+  vertical-align: top;
+  background-color: lightblue;
+}
+
+a:link {
+  color: #b99475;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #6c744d;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+a:active {
+  color: #da0f40;
+}
+
+a[tabindex]:focus {
+  color: red;
+  outline: none;
+}
+
+#recipe-list li {
+  list-style-type: circle;
+}
+
+section {
+  margin: 1rem;
+}
+
+figure {
+  display: table;
+  align-content: center;
+  max-width: 30%;
+  margin: 1rem auto;
+  webkit-box-shadow: 4px 8px 11px 3px #00000063;
+  box-shadow: 4px 8px 11px 3px #00000063;
+}
+
+.recipe-box {
+  background-color: #3a362d;
+  padding: 2rem;
+  margin: 1rem;
+  webkit-box-shadow: 4px 8px 11px 3px #00000063;
+  box-shadow: 4px 8px 11px 3px #00000063;
+}
+
+.recipe-name {
+  padding: 0.5rem;
+  font-variant: small-caps;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: antiquewhite;
+  text-align: center;
+}
+h4 {
+  text-align: center;
+}
+
+footer {
+  background-color: #30312b;
+  padding: 2rem;
+  margin: 2.5rem;
+  -webkit-box-shadow: 4px 8px 11px 3px #00000063;
+  box-shadow: 4px 8px 11px 3px #00000063;
+}

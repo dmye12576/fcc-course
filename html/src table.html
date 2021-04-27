@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      h1 {
+        text-align: center;
+        background-color: rgb(206, 201, 166);
+        color: rgb(163, 4, 4);
+      }
+      #t1 table {
+        margin-right: 2rem;
+        padding: 2rem;
+      }
+
+      #t2 table {
+        width: 50%;
+        border: 1px solid lightgray;
+        border-collapse: collapse;
+      }
+      #t2 table th,
+      #t2 table td {
+        border: 1px solid lightgray;
+        padding: 10px;
+      }
+
+      #t3 table {
+        border: 2px solid black;
+        border-collapse: collapse;
+        background-color: lightgray;
+      }
+      #t3 table th {
+        background-color: gray;
+      }
+      #t3 table th,
+      #t3 table td {
+        border: 2px solid black;
+        height: 30px;
+        width: 150px;
+      }
+      #t4 table {
+        border: 2px solid white;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #t4 th,
+      #t4 td {
+        border: 2px solid white;
+        height: 55px;
+      }
+      #t4 thead {
+        border-bottom: 5px solid white;
+      }
+      #t4 th {
+        background-color: #5e99ca;
+      }
+      #t4 tr {
+        background-color: #bdd7ec;
+      }
+      #t4 tr:nth-child(even) {
+        background-color: #eaeef1;
+      }
+
+      #t6 table {
+        border: 2px solid white;
+        border-collapse: collapse;
+      }
+      #t6 th,
+      #t6 td {
+        border: 2px solid white;
+        height: 55px;
+        width: 200px;
+      }
+      #t6 thead {
+        border-bottom: 5px solid white;
+      }
+      #t6 th {
+        background-color: #5e99ca;
+      }
+      #t6 tr {
+        background-color: #bdd7ec;
+      }
+      #t6 tr:nth-child(even) {
+        background-color: #eaeef1;
+      }
+      #t6 tr:hover {
+        background-color: rgb(218, 20, 142);
+      }
+      #footer {
+        background-color: rgb(206, 201, 166);
+        color: rgb(163, 4, 4);
+        margin-top: 2rem;
+      }
+    </style>
+    <h1>Table Exercise</h1>
+    <section id="t1">
+      <h2>1.</h2>
+      <table>
+        <tr>
+          <th>header cell</th>
+          <th>header cell</th>
+          <th>header cell</th>
+        </tr>
+        <tr>
+          <td>data cell</td>
+          <td>data cell</td>
+          <td>data cell</td>
+        </tr>
+        <tr>
+          <td>data cell</td>
+          <td>data cell</td>
+          <td>data cell</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="t2">
+      <h2>2.</h2>
+      <table>
+        <tr>
+          <th>Attribute</th>
+          <th>Description</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>src</td>
+          <td>Used to specify the URL of the image</td>
+          <td>src="images/test.png"</td>
+        </tr>
+        <tr>
+          <td>alt</td>
+          <td>Used to specify replacement text for the image</td>
+          <td>alt="Test image for HTML5 course"</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="t3">
+      <h2>3.</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td rowspan="2"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="t4">
+      <h2>4.</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Trim</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Honda</td>
+            <td>Accord</td>
+            <td>Sport</td>
+            <td>2020</td>
+          </tr>
+          <tr>
+            <td>Toyota</td>
+            <td>Camry</td>
+            <td>SE</td>
+            <td>2021</td>
+          </tr>
+          <tr>
+            <td>Ford</td>
+            <td>Taurus</td>
+            <td>SEL</td>
+            <td>2020</td>
+          </tr>
+          <tr>
+            <td>Chevrolet</td>
+            <td>Impala</td>
+            <td>LT</td>
+            <td>2020</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="five">
+      <h2>5.</h2>
+      <a href="https://mdbootstrap.com/docs/react/tables/scroll/ "
+        >React Scroll</a
+      >
+    </section>
+    <section id="t6">
+      <h2>6.</h2>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <footer id="footer">Examples of Tables</footer>
+  </body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!-- Assigment 1 for HTML5 Course by W3DEV / by Gonzalo Moreno 2015-02-10 -->
+<html lang="en">
+  <head>
+    <link
+      href="http://fonts.googleapis.com/css?family=Inconsolata/Oxygen"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gonzalo Moreno | About</title>
+    <link rel="stylesheet" href="styles1.css" />
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+      /*  ====================================
+    CSS Customized by Gonzalo Moreno
+    2015-02-10 - Assignment 1 - 
+    HTML5 Course by W3DEV
+     
+     Colour Palette:
+     ---------------
+     1:   #FAFAFA
+     2:   #9496A2
+     3:   #72747E
+     4:   #3C3E47
+     5:   #0F1013
+    ==================================== */
+
+      header,
+      nav,
+      section,
+      article,
+      figure,
+      figcaption,
+      aside,
+      footer {
+        display: block;
+      }
+
+      body {
+        background: #9496a2 url(http://i.imgur.com/QQOslA5.jpg);
+        color: #0f1013;
+        font-family: "Oxygen", Helvetica, Verdana, Arial, sans-serif;
+        font-size: 1.2em;
+        font-weight: normal;
+        line-height: 1.6em;
+        letter-spacing: 0.1em;
+        word-spacing: 0.3em;
+        text-align: center;
+        margin: 0 auto;
+        width: 960px;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizelegibility;
+      }
+
+      .wrapper {
+        border: 5px solid silver;
+        border-style: outset;
+        border-radius: 80px 80px;
+        margin: 10px auto;
+        background: white;
+        box-shadow: 10px 10px 10px 10px;
+      }
+
+      #main-header {
+        background: #3c3e47;
+        color: #fafafa;
+        padding: 5px;
+        margin-bottom: 0;
+        border-radius: 80px 80px 0 0;
+        border-bottom: 2px solid #9496a2;
+      }
+
+      #main-footer {
+        background-color: #3c3e47;
+        color: #fafafa;
+        padding: 5px;
+        margin-top: 10px;
+        clear: both;
+        border-radius: 0 0 80px 80px;
+        border-top: 2px solid #9496a2;
+      }
+
+      h1.intro {
+        font-family: "Oxygen", Helvetica, Arial, sans-serif;
+        font-size: 2.2em;
+        font-weight: normal;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 40 auto 0;
+        height: 30px;
+      }
+
+      hr {
+        color: #72747e;
+        border: 1px solid;
+        max-width: 780px;
+        border-style: inset;
+      }
+
+      strong {
+        font-size: 1em;
+        margin: 0 auto;
+      }
+
+      header img.personal-pic {
+        border: 3px inset #9496a2;
+        margin-top: 20px;
+        border-radius: 50%;
+      }
+
+      header h2 {
+        text-transform: uppercase;
+        font-weight: lighter;
+      }
+
+      .small {
+        font-size: 0.8em;
+        font-weight: lighter;
+        letter-spacing: 0.04em;
+        text-transform: capitalize;
+      }
+
+      nav h1 {
+        text-indent: -9999px;
+        font-size: 8px;
+      }
+
+      header nav ul {
+        margin: 0;
+        padding: 10px 0 20px;
+        display: block;
+      }
+
+      header nav ul li {
+        display: inline;
+        word-spacing: normal;
+        font-family: Georgia, Times, "Times New Roman", serif;
+        font-size: 1.8em;
+        text-transform: uppercase;
+        margin: 20px 60px;
+        padding: 10px;
+      }
+
+      a:link {
+        color: #72747e;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: #72747e;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        color: #fafafa;
+        border-bottom: 2px solid red;
+      }
+
+      a:hover {
+        color: #0f1013;
+        border-bottom: none;
+      }
+
+      a:active {
+        color: white;
+      }
+
+      .main-content {
+        max-width: 600px;
+        display: block;
+        float: left;
+      }
+
+      section {
+        float: left;
+        text-align: justify;
+        margin: 0 40px 0 0;
+        padding: 0 15px;
+        display: block;
+      }
+
+      h1.content {
+        background: #3c3e47;
+        color: #fafafa;
+        font-size: 1.5em;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px 0;
+        margin: 40px 0 40px 0;
+        border-radius: 80px 80px;
+        box-shadow: 5px 5px 5px 5px #72747e;
+      }
+
+      section p,
+      aside p {
+        margin: 10px 0 30px;
+        font-family: "Oxygen", Helvetica, Arial, sans-serif;
+      }
+
+      article {
+        margin: 0;
+        text-align: left;
+      }
+
+      article h1 {
+        font-size: 1.5em;
+        font-weight: bolder;
+        text-decoration: underline;
+        text-indent: left;
+        margin: 0 0 0 20px;
+      }
+
+      section article ul {
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+        padding: 0;
+      }
+
+      section article ul li {
+        font-family: "Inconsolata", Courier, "Courier New", monospace;
+        display: inline-block;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 15px 0;
+      }
+
+      figure,
+      figcaption {
+        text-align: center;
+        margin: 0;
+      }
+
+      aside {
+        max-width: 300px;
+        float: right;
+        text-align: justify;
+        margin: 0;
+        margin-right: 0px;
+        padding-left: 40px;
+        padding-right: 15px;
+        font-weight: lighter;
+        line-height: 1.8em;
+        letter-spacing: 0.04em;
+        word-spacing: 0.1em;
+      }
+
+      aside ul {
+        display: block;
+        text-align: left;
+      }
+
+      aside ul li {
+        display: inline-block;
+        padding: 0 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="main-header" class="intro">
+        <h1 class="intro">David Myers | <strong>About Page</strong></h1>
+        <hr />
+        <img
+          class="personal-pic"
+          src="http://i.imgur.com/oi4VXB0l.png?1"
+          alt="An avatar picture of Gonzalo Moreno done with FaceQ App"
+          height="210"
+          width="210"
+        />
+        <h2>FRONT-END <strong>WEB DEVELOPER </strong></h2>
+        <p>
+          <span class="small"><b>ABOUT</b> MYSELF</span>
+        </p>
+        <hr />
+        <nav id="main-navigation">
+          <h1>Navigation Menu</h1>
+          <ul>
+            <li><a href="#about" title="About">About</a></li>
+            <li><a href="#skills" title="Skills">Skills</a></li>
+            <li><a href="#contact" title="Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- end of main-header -->
+      <div class="main-content">
+        <section class="about content">
+          <h1 id="about" class="content">About</h1>
+          <p>
+            Hi there!! <br />My name is David Myers. I'm from Oshkosh, 54 years
+            old; I studied all my life there, but now I live in Cabuyao
+            (Philippines) with great weather almost all the year!!
+          </p>
+
+          <p>
+            My first experience with <em>Coding</em> started programming in
+            "Basic" long long time ago; very easy video-games with very low
+            quality graphics and so many lines of code by that time in order to
+            get those poor results; by that time, even the "www" was something
+            almost unknown, and I stopped coding completely; "Basic" was
+            extremely boring to me.
+          </p>
+
+          <p>
+            I became an Entrepreneur some years later, and got back to
+            <em>Programming Languages</em>. I am very interested in developing
+            my own <em>Apps</em>; at the moment, I'm working hard on a very
+            interesting Application.
+          </p>
+
+          <p>
+            I'm sure I will enjoy this course a lot, and hopefully get the
+            neccesary knowledge to start developing with the confidence that you
+            need to create something spectacular.
+          </p>
+
+          <p>Good luck and see you on board!</p>
+        </section>
+        <!-- end about section -->
+        <section class="skills content">
+          <h1 id="skills" class="content">Skills</h1>
+          <article class="languages">
+            <h1>Languages</h1>
+            <ul>
+              <li>
+                <figure>
+                  <img
+                    src="http://s15.postimg.org/o143tlvbr/html5_128px.png"
+                    alt="HTML5 logo"
+                    height="128"
+                    width="128"
+                  />
+                  <figcaption><strong>HTML5</strong></figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img
+                    src="http://s2.postimg.org/4ydl7cak5/css3_128px.png"
+                    alt="CSS3 logo"
+                    height="128"
+                    width="128"
+                  />
+                  <figcaption><strong>CSS3</strong></figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img
+                    src="http://s14.postimg.org/vpclsg2f1/javascript_128px.png"
+                    alt="JavaScript logo"
+                    height="128"
+                    width="128"
+                  />
+                  <figcaption><strong>JavaScript</strong></figcaption>
+                </figure>
+              </li>
+            </ul>
+          </article>
+          <!-- end languages -->
+          <article class="Tools">
+            <h1>Tools</h1>
+            <ul>
+              <li><strong>JQuery </strong>|</li>
+              <li><strong>Angular JS </strong>|</li>
+              <li><strong>PHP &amp; MySQL </strong>|</li>
+              <li><strong>Node JS </strong>|</li>
+              <li><strong>Ruby on Rails </strong>|</li>
+              <li><strong>Adobe Photoshop</strong></li>
+            </ul>
+          </article>
+          <!-- end Tools -->
+        </section>
+        <!-- end skills section -->
+      </div>
+      <!-- end main-content -->
+      <aside class="contact content">
+        <h1 id="contact" class="content">Contact</h1>
+        <p></p>
+        <div itemscope itemtype="http://schema.org/Person">
+          <div itemprop="name"><strong>Gonzalo Moreno</strong></div>
+          <hr />
+          <div itemscope itemtype="http://schema.org/Organization">
+            <span itemprop="name">M&amp;G PROJECT MANAGEMENT</span>
+          </div>
+          <div itemprop="jobtitle">Associate Director</div>
+          <div itemprop="description">Front-End Web Developer</div>
+          <hr />
+          <div
+            itemprop="address"
+            itemscope
+            itemtype="http://schema.org/PostalAddress"
+          >
+            <div itemprop="streetAddress">Villa Padierna Residences, 6</div>
+            <div>
+              <span itemprop="addressLocality">Marbella</span>,
+              <span itemprop="addressRegion">Malaga</span>
+            </div>
+            <div itemprop="postalCode">29679</div>
+            <div itemprop="addressCountry">Spain</div>
+          </div>
+          <div itemprop="telephone">(+34) 606-424-338</div>
+          <div itemprop="email">
+            <a class="contact" href="mailto:gmoreno@mgprojectmanagement.com"
+              >Email me</a
+            >
+          </div>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

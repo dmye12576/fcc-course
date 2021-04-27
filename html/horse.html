@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>MOVE THE MOUSE POINTER OVER THIS PLAYER'S ELEMENTS!</title>
+  <meta charset="utf-8"/>
+  <style>
+
+#figaudio1 {
+   width : 420px;;
+   text-align:center;
+   padding : 6px;
+   background : white; 
+   margin : 0 11px 0px 0;
+   border :solid 1px #888888;
+   border-radius : 8px ;
+}
+
+#figcptionaudio1 {
+   font-size : .8em;
+   padding : 6px 8px;
+   background : #a9c3f3; 
+   display :block;
+   text-align :center;
+   font-family : georgia, serif;
+   font-style : italic;
+   border-radius : 7px ;
+}
+
+#figaudio1 > img {
+  background : #bedaf1;
+   padding : 5px;
+   border : solid 1px #444444;
+}
+
+/* For audio and img transitions/animation */
+audio, #figaudio1 > img {
+  transition:all 0.5s;
+}
+ 
+#figaudio1 > img:hover {
+    box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+    transform: scale(1.05);
+}
+ 
+audio:hover, audio:focus, audio:active {
+    box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+    transform: scale(1.05);
+}
+  </style>
+</head>
+<figure id="figaudio1">
+  <img id="imghorse" width="200" 
+       src="http://upload.wikimedia.org/wikipedia/commons/d/d4/Nokota_Horses.jpg" 
+       alt = "a horse"/> 
+  <figcaption id="figcptionaudio1"> Press Play to hear the horse ! 
+<audio controls="controls">
+  <source src="http://mainline.i3s.unice.fr/mooc/horse.ogg" type="audio/ogg" />
+  <source src="http://mainline.i3s.unice.fr/mooc/horse.mp3" type="audio/mp3" />
+  Your browser does not support the audio element.
+      Download the audio/video in
+     <a href=”http://mainline.i3s.unice.fr/mooc/horse.ogg”>OGG</a>
+     or <a href=”http://mainline.i3s.unice.fr/mooc/horse.mp3”>MP3</a> 
+     format.
+</audio>
+  </figcaption>
+</figure>

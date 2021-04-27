@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WEBBEM - Multimedia</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <style>
+      .badges {
+        background-color: darkgrey;
+        height: 100%;
+        margin: 0 auto;
+        max-height: 100px;
+        max-width: 100px;
+        width: 100%;
+      }
+
+      .badges a {
+        background-color: #e44d26;
+        height: 100%;
+        max-height: 100px;
+        max-width: 100px;
+        width: 100%;
+      }
+
+      .banner {
+        background-color: #e44d26;
+        color: #fff;
+        font-size: 400%;
+        margin: 0;
+        padding-bottom: 0.5%;
+        text-shadow: -1px 0 2px #000, 0 1px 2px #000, 1px 0 2px #000,
+          0 -1px 2px #000;
+        width: 100%;
+      }
+
+      .container {
+        background-color: #d3d3d3;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .denote {
+        margin-top: 0;
+        text-align: right;
+        width: 100%;
+      }
+
+      .denote,
+      .signup span,
+      figcaption,
+      footer {
+        font-size: 80%;
+      }
+
+      .drop {
+        margin: 2%;
+        width: 20%;
+      }
+
+      .dropZone {
+        background: darkgrey;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        height: 8em;
+        overflow: auto;
+        text-align: center;
+        width: 100%;
+      }
+
+      .leftSide {
+        border-right: 1px solid #000;
+      }
+
+      .leftSide dl {
+        display: block;
+        margin: 0 auto;
+        text-align: left;
+        width: 50%;
+      }
+
+      .page {
+        background-color: #f16529;
+        border-bottom: 1px solid #000;
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 200%;
+        margin: 0;
+        padding-bottom: 0.2%;
+        text-shadow: -1px 0 2px #000, 0 1px 2px #000, 1px 0 2px #000,
+          0 -1px 2px #000;
+        width: 100%;
+      }
+
+      .player {
+        background: #000;
+        margin: 0 auto;
+        max-width: 640px;
+        overflow: hidden;
+        width: 95%;
+      }
+
+      .player button {
+        background-color: #004080;
+        border: none;
+        color: #d3d3d3;
+        float: left;
+        font-size: 100%;
+        height: 1.75em;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        white-space: nowrap;
+        width: 15%;
+      }
+
+      .player button:hover,
+      .player input:hover {
+        background-color: #00509f;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .player input {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background-color: #004080;
+        border: none;
+        color: #d3d3d3;
+        float: left;
+        height: 1.5em;
+        margin: 0;
+        padding: 0;
+        width: 40%;
+      }
+
+      .player input[type="range"]::-ms-track {
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .player input[type="range"]::-webkit-slider-thumb {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background: #00509f;
+        border: 1px solid #d3d3d3;
+        box-sizing: border-box;
+        height: 1.5em;
+        width: 1em;
+      }
+
+      .player video {
+        background: #000;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        height: 100%;
+        margin: 10% auto;
+        max-width: 640px;
+        width: 100%;
+      }
+
+      .result {
+        height: 100%;
+        margin: 0 auto;
+        max-width: 640px;
+        width: 100%;
+      }
+
+      .rightSide {
+        border-left: 1px solid #000;
+      }
+
+      .selfie {
+        height: 100%;
+        max-width: 128px;
+        width: 100%;
+      }
+
+      .sideNavBar a {
+        width: 100%;
+      }
+
+      .signup {
+        border: 1px solid #000;
+        box-sizing: border-box;
+        margin: 0 auto;
+        text-align: left;
+        width: 95%;
+      }
+
+      .signup div {
+        display: inline-block;
+        margin-bottom: 0.8%;
+        width: 100%;
+      }
+
+      .signup input {
+        background: darkgrey;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        height: 1.5em;
+        width: 50%;
+      }
+
+      .signup input:focus {
+        background-color: #fff;
+        color: #000;
+      }
+
+      .signup input:hover {
+        background-color: #fff;
+        cursor: default;
+      }
+
+      .signup input:required:valid {
+        background-color: #fff;
+        border-color: #e44d26;
+        color: #000;
+      }
+
+      .signup input:valid {
+        background: #fff;
+        border-color: #e44d26;
+      }
+
+      .signup input[type="button"] {
+        background-color: #004080;
+        color: #d3d3d3;
+      }
+
+      .signup input[type="button"]:hover,
+      .signup input[type="file"]:hover,
+      input[type="submit"]:hover {
+        cursor: pointer;
+      }
+
+      .signup input[type="date"] {
+        font-size: 130%;
+      }
+
+      .signup input[type="file"] {
+        background: #004080;
+        border: none;
+        color: #d3d3d3;
+        display: block;
+        float: left;
+        height: 1.5em;
+        width: 50%;
+      }
+
+      .signup label {
+        color: #000;
+        display: inline-block;
+        margin-left: 2.5%;
+        width: 25%;
+      }
+
+      .signup progress {
+        background-color: #004080;
+        border: none;
+        display: block;
+        float: right;
+        height: 1.7em;
+        margin: 0;
+        padding: 0;
+        width: 50%;
+      }
+
+      .signup span {
+        margin-left: 0.2em;
+        width: 20%;
+      }
+
+      .staticMap {
+        background-color: #e44d26;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        color: #fff;
+        height: 100%;
+        margin: 0 auto;
+        max-height: 200px;
+        max-width: 200px;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .thumbs {
+        background-color: darkgrey;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .thumbs img {
+        height: 100%;
+        margin: 2%;
+        max-width: 128px;
+        width: 20%;
+      }
+
+      .thumbs img:hover {
+        border: 1px solid #fff;
+        cursor: pointer;
+      }
+
+      .top {
+        border-bottom: 1px solid #000;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .topNavBar a {
+        float: left;
+        width: 20%;
+      }
+
+      .topNavBar li,
+      .sideNavBar li {
+        list-style-type: none;
+      }
+
+      .topNavBar,
+      .sideNavBar {
+        margin: 0;
+        padding: 0;
+      }
+
+      ::-webkit-input-placeholder {
+        color: #000;
+      }
+
+      ::-moz-placeholder {
+        color: #000;
+      }
+
+      :-ms-input-placeholder {
+        color: #000;
+      }
+
+      ::-webkit-scrollbar {
+        width: 1em;
+      }
+
+      ::-webkit-scrollbar-thumb,
+      .player input[type="range"]:hover {
+        background-color: #00509f;
+      }
+
+      ::-webkit-scrollbar-track,
+      ::-webkit-scrollbar-button,
+      ::-webkit-scrollbar-corner {
+        background-color: #004080;
+      }
+
+      :focus {
+        outline: #000;
+      }
+
+      a {
+        background-color: #004080;
+        color: #fff;
+        display: block;
+        font-size: 120%;
+        height: 1.4em;
+        overflow: hidden;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      a:hover,
+      summary:hover,
+      .signup input[type="button"]:hover,
+      .signup input[type="file"]:hover,
+      input[type="submit"]:hover {
+        background-color: #00509f;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      article {
+        display: block;
+        margin: 0 auto;
+        width: 95%;
+      }
+
+      aside {
+        background-color: darkgrey;
+        border-bottom: 1px solid #000;
+        box-sizing: border-box;
+        float: left;
+        overflow: hidden;
+        padding-bottom: 5%;
+        width: 20%;
+      }
+
+      body {
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        background-color: grey;
+        color: #000;
+        font-family: Verdana "Geneva" sans-serif;
+        font-size: 11px;
+        text-align: center;
+        user-select: none;
+      }
+
+      body:hover {
+        cursor: default;
+      }
+
+      canvas {
+        background-image: url("http://www.webbem.nl/images/dungeon.jpg");
+        border: 1px solid #000;
+      }
+
+      details {
+        background-color: darkgrey;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 60%;
+      }
+
+      footer {
+        background-color: #004080;
+        clear: both;
+        color: #d3d3d3;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+      }
+
+      html {
+        overflow-y: scroll;
+      }
+
+      img {
+        border: 1px solid #000;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #004080;
+        border-color: #000;
+        color: #d3d3d3;
+        font-size: 120%;
+        margin-top: 1%;
+        width: 20%;
+      }
+
+      legend {
+        text-align: center;
+      }
+
+      mark {
+        background: #e44d26;
+      }
+
+      ol {
+        margin: 0 auto;
+        text-align: left;
+        width: 60%;
+      }
+
+      section {
+        float: left;
+        overflow: hidden;
+        padding-bottom: 5%;
+        width: 60%;
+      }
+
+      summary {
+        background-color: #004080;
+        color: #fff;
+        height: 1.4em;
+      }
+    </style>
+    <script>
+      var myVid = document.getElementById("myVideo");
+      var pl = document.getElementById("pl");
+      var pr = document.getElementById("pr");
+      var seek = document.getElementById("slide");
+      var nx = document.getElementById("nx");
+      var volDown = document.getElementById("volDown");
+      var volUp = document.getElementById("volUp");
+      var vid1 = document.getElementById("vid1");
+      var vid2 = document.getElementById("vid2");
+      var vid3 = document.getElementById("vid3");
+
+      var sources = [
+        "https://mainline.i3s.unice.fr/mooc/mi5.mp4",
+        "https://mainline.i3s.unice.fr/mooc/ff7.mp4",
+        "https://mainline.i3s.unice.fr/mooc/jbs.mp4",
+      ];
+
+      var num = 0;
+      myVid.src = sources[num];
+      myVid.volume = 0.5;
+
+      // start playing
+      function cinema() {
+        function playPause() {
+          if (myVid.paused === true) {
+            myVid.play();
+            pl.innerHTML = "Pause";
+          } else {
+            myVid.pause();
+            pl.innerHTML = "Play";
+          }
+        }
+
+        function prevVid() {
+          if (num === 0) {
+            num = 0;
+          } else {
+            num--;
+            seek.value = 0;
+            myVid.src = sources[num];
+            myVid.play();
+          }
+        }
+
+        function vidSeek() {
+          var vidTime = myVid.duration * (seek.value / 100);
+          myVid.currentTime = vidTime;
+        }
+
+        function vidTime() {
+          var nt = myVid.currentTime * (100 / myVid.duration);
+          seek.value = nt;
+        }
+
+        function nextVid() {
+          if (num === 2) {
+            if (seek.value < 100) {
+              num = 2;
+            } else {
+              num = 0;
+              myVid.src = sources[num];
+              seek.value = 0;
+              myVid.pause();
+              pl.innerHTML = "Play";
+            }
+          } else {
+            num++;
+            seek.value = 0;
+            myVid.src = sources[num];
+            myVid.play();
+          }
+        }
+
+        function volChangeDown() {
+          if (myVid.volume > 0) {
+            myVid.volume -= 0.1;
+          }
+        }
+
+        function volChangeUp() {
+          if (myVid.volume < 1) {
+            myVid.volume += 0.1;
+          }
+        }
+
+        function vidChoice1() {
+          num = 0;
+          myVid.src = sources[num];
+          playPause();
+        }
+
+        function vidChoice2() {
+          num = 1;
+          myVid.src = sources[num];
+          playPause();
+        }
+
+        function vidChoice3() {
+          num = 2;
+          myVid.src = sources[num];
+          playPause();
+        }
+
+        // Add all event listeners
+        pl.addEventListener("click", playPause, false);
+        pr.addEventListener("click", prevVid, false);
+        seek.addEventListener("mousedown", function () {
+          myVid.pause();
+          pl.innerHTML = "Play";
+        });
+        seek.addEventListener("mouseup", function () {
+          myVid.play();
+          pl.innerHTML = "Pause";
+        });
+        seek.addEventListener("input", vidSeek, false);
+        myVid.addEventListener("timeupdate", vidTime, false);
+        myVid.addEventListener("ended", nextVid, false);
+        nx.addEventListener("click", nextVid, false);
+        volDown.addEventListener("mousedown", volChangeDown, false);
+        volUp.addEventListener("mousedown", volChangeUp, false);
+        vid1.addEventListener("click", vidChoice1);
+        vid2.addEventListener("click", vidChoice2);
+        vid3.addEventListener("click", vidChoice3);
+      }
+
+      cinema();
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="top">
+        <h1 class="banner">Project: HTML5</h1>
+        <nav>
+          <h1 class="page"><i>Multimedia</i></h1>
+          <ul class="topNavBar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="microdata.html">Elements and Microdata</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="forms.html">Form Geo Persist DnD</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <aside class="leftSide">
+          <h1>Multimedia</h1>
+          <article>
+            <h1>HTML5 Video element</h1>
+            <p>
+              The second Assignment was optional, We had to look up some of the
+              "enhanced" HTML5 video players available on the web.
+            </p>
+            <p>
+              We had to play around with the new video element to discover its
+              functions. For example we could let the video play in a loop, or
+              let video's play one after each other.
+            </p>
+            <p>
+              We could also try to make a custom videoplayer with custom
+              buttons.
+            </p>
+            <p>
+              For the more experienced programmers there where options to add
+              subtitles and audiotracks, and they could try out the new WebAudio
+              API.
+            </p>
+          </article>
+        </aside>
+        <section>
+          <h1>Assignment: Week 2</h1>
+          <article>
+            <h1>Create a custom videoplayer</h1>
+            <p>
+              Author: Maurice Buiten, student of the W3C HTML5 course at
+              w3devcampus.com, ancestor of this MOOC. Original version at:
+              http://www.webbem.nl/multimedia.html
+            </p>
+          </article>
+          <div class="player">
+            <video id="myVideo" preload width="640" height="360">
+              <source src="https://mainline.i3s.unice.fr/mooc/mi5.mp4" />
+            </video>
+            <div>
+              <button type="button" id="pl">Play</button>
+              <button type="button" id="pr">Previous</button>
+              <input id="slide" type="range" value="0" />
+              <button type="button" id="nx">Next</button>
+              <button type="button">
+                <span id="volDown">- &nbsp; </span>Vol<span id="volUp">
+                  &nbsp; +</span
+                >
+              </button>
+            </div>
+            <div class="thumbs">
+              <img
+                id="vid1"
+                src="http://i.imgur.com/y6RTkIi.gif"
+                width="128"
+                height="72"
+                alt="video 1"
+              />
+              <img
+                id="vid2"
+                src="http://i.imgur.com/MUG6cex.gif"
+                width="128"
+                height="72"
+                alt="video 2"
+              />
+              <img
+                id="vid3"
+                src="http://i.imgur.com/Ey7oJdj.gif"
+                width="128"
+                height="72"
+                alt="video 3"
+              />
+            </div>
+          </div>
+        </section>
+        <aside class="rightSide">
+          <header>
+            <h1>Under Construction</h1>
+          </header>
+          <article>
+            <h1>More functions to be added</h1>
+            <p>
+              I will add more functions to this videoplayer in the future. So
+              this is still work in progress.
+            </p>
+          </article>
+        </aside>
+      </main>
+      <footer>
+        This page was made by <mark>Maurice Buiten</mark> with the Sublime Text
+        3 editor
+        <mark>©2015</mark>
+      </footer>
+    </div>
+  </body>
+</html>

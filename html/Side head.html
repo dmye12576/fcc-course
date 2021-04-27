@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0px;
+        font-family: arial;
+      }
+
+      aside,
+      main,
+      section {
+        margin: 10px;
+        padding: 20px;
+        background-color: rgb(242, 243, 247);
+        border-radius: 10px;
+      }
+      .fc {
+        display: flex;
+        flex-flow: column no-wrap;
+      }
+
+      header,
+      footer {
+        flex: 1 0;
+        min-height: 100vh;
+        max-width: 25vh;
+        margin: 10px;
+        padding: 20px;
+        background-color: rgb(235, 231, 184);
+        border-radius: 10px;
+      }
+
+      .fb {
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      .fb > * {
+        flex: 2 0;
+        min-height: calc(100vh / 3);
+        box-sizing: border-box;
+      }
+      .fb > *:hover {
+        background-color: rgb(142, 192, 248);
+        color: white;
+      }
+      header:hover,
+      footer:hover {
+        color: rgb(241, 11, 11);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="fc">
+      <div>
+        <header>Swanns Way - Overture</header>
+    </div>
+        
+      <div class="fb">
+        <aside>
+          For a long time I used to go to bed early. Sometimes, when I had put
+          out my candle, my eyes would close so quickly that I had not even time
+          to say &quot;I'm going to sleep.&quot;
+        </aside>
+
+        <main>
+          And half an hour later the thought that it was time to go to sleep
+          would awaken me; I would try to put away the book which, I imagined,
+          was still in my hands, and to blow out the light; I had been thinking
+          all the time, while I was asleep, of what I had just been reading, but
+          my thoughts had run into a channel of their own, until I myself seemed
+          actually to have become the subject of my book: a church, a quartet,
+          the rivalry between François I and Charles V.
+        </main>
+
+        <section>
+          <p>
+            This impression would persist for some moments after I was awake; it
+            did not disturb my mind, but it lay like scales upon my eyes and
+            prevented them from registering the fact that the candle was no
+            longer burning.
+          </p>
+        </section>
+        </div>
+        <div>
+        <footer>by Marcel Proust</footer>
+    </div>
+    
+  </body>
+</html>

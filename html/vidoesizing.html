@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Full width video like PayPal site</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  var video; function init() { // function called when the page is loaded video
+  = document.querySelector("#myVideo"); // For initial value video.width =
+  window.innerWidth; video.height = window.innerHeight; // For dealing with
+  window resize window.onresize = function() { video.width = window.innerWidth;
+  video.height = window.innerHeight; }; }
+  <body onload="init();">
+    <video id="myVideo" autoplay>
+      <source src=https://mainline.i3s.unice.fr/mooc/samuraiPizzacat.webm
+      type=video/webm> <source
+      src=https://mainline.i3s.unice.fr/mooc/samuraiPizzacat.ogg type=video/ogg>
+      <source src=https://mainline.i3s.unice.fr/mooc/samuraiPizzacat.mp4
+      type=video/mp4>
+    </video>
+  </body>
+</html>

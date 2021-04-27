@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        background-color: rgba(156, 146, 146, 0.438);
+        color: rgb(156, 8, 8);
+      }
+      audio {
+        margin-left: 150px;
+      }
+
+      video {
+        margin-left: 150px;
+      }
+    </style>
+  </head>
+  <h1>Multimedia Project</h1>
+    <body>
+      <section>
+        <h2>Audio file that loads automatically and is muted when playback begins.</h2>
+        <audio controls autoplay muted>
+          <source
+            src="https://ia800201.us.archive.org/4/items/EightiesMusicEasyListening/06%20Is%20This%20Love.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+      </section>
+
+       
+
+        <h2>Audio for Chrome, Internet Explorer, and
+          Mozilla Firefox.</h2>
+        <audio
+          src="https://ia800201.us.archive.org/4/items/EightiesMusicEasyListening/01%20Careless%20Whisper.mp3"
+          controls
+        >
+          Your browser does not support the audio element.
+        </audio>
+      </section>
+       </section>
+       <h2>HTML video player that plays a video file of your choice in Google Chrome, Internet Explorer and Mozilla Firefox with Captioning</h2>
+       <video controls loop muted preload="none" height="320" width="600">
+       <source src="https://courses.edx.org/assets/courseware/v1/5315ef6081b631a89442c13f916325c2/asset-v1:W3Cx+HTML5.0x+1T2020+type@asset+block/cat__online-video-cutter.com_.mp4" type="video/mp4">
+       Your browser does not support the HTML5 video element.
+         <track src="https://courses.edx.org/assets/courseware/v1/5315ef6081b631a89442c13f916325c2/asset-v1:W3Cx+HTML5.0x+1T2020+type@asset+block/cat__online-video-cutter.com_cap.vtt" 
+         kind="captions" srclang="en" label="English" default>>
+       </video>
+      
+      </section>
+      </body>
+    </html>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Full screen video, example from demosthene.info by</title>
+    <style>
+      html,
+      body {
+        color: white;
+        height: 100%;
+      }
+      header {
+        height: 100%;
+        background-image: url("https://dupontcours.free.fr/IMG/dots.png"),
+          url("#");
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+        background-position: center center, top left;
+        font-family: sans-serif;
+        color: #051a00;
+      }
+
+      header video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <video
+        autoplay
+        loop=""
+        poster="https://mainline.i3s.unice.fr/mooc/polina.jpg"
+        id="bgvid"
+      >
+        <source
+          src="https://mainline.i3s.unice.fr/mooc/polina.webm"
+          type="video/webm"
+        />
+        <source
+          src="https://mainline.i3s.unice.fr/mooc/polina.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </header>
+    <section>
+      <h1>
+        https://demosthenes.info/blog/777/Create-Fullscreen-HTML5-Page-
+        Background-Video
+      </h1>
+    </section>
+  </body>
+</html>

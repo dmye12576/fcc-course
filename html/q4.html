@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      html,
+      body {
+        font-size: medium;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      h1 {
+        font-family: initial;
+        background-color: rgb(63, 61, 56);
+        text-align: center;
+        border-width: 200px;
+        color: seashell;
+      }
+      h2 {
+        background-color: rgb(100, 93, 83);
+        text-align: center;
+        border-width: 300px;
+        color: seashell;
+      }
+      #box {
+        background-color: ivory;
+
+        border: 1px solid;
+        padding: 2rem;
+        margin: 1rem;
+        webkit-box-shadow: 4px 8px 11px 3px #00000063;
+        box-shadow: 4px 8px 11px 3px #00000063;
+      }
+      footer {
+        background-color: #4e4a3e;
+        color: floralwhite;
+        padding: 2rem;
+        margin: 2.5rem;
+        -webkit-box-shadow: 4px 8px 11px 3px #00000063;
+        box-shadow: 4px 8px 11px 3px #00000063;
+      }
+      .bird {
+        color: crimson;
+      }
+      .bird-flying {
+        color: rgb(30, 30, 238);
+      }
+      .insect-flying {
+        color: darkgreen;
+      }
+      .insect {
+        color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Birds and Not Birds</h1>
+    <h2>A compendium of flying and not flying things</h2>
+    <article>
+      <div id="box">
+        <p>
+          While walking through the woods with my daughter she asked me
+          <q>Papa, what kind of bird is that?</q> and was pointing to an
+          <a href="#ok">oesterkirche</a>. (A huge one!)
+        </p>
+      </div>
+      <div id="box">
+        <p>
+          I told her its name and explained that while an oesterkirche flies
+          like a bird and eats bugs and worms (<sup
+            ><a href="#footnote">*</a></sup
+          >) like a bird, it is not, in fact, a bird. This lead us to a
+          discussion of other flying things that might or might not be birds,
+          and birds that don't fly. Here is our list:
+        </p>
+      </div>
+      <div id="box">
+        <ul>
+          <li class="bird">penguin</li>
+          <li class="bird-flying">hawk</li>
+          <li class="flying">oesterkirche</li>
+          <li class="insect-flying">butterfly</li>
+          <li class="bird">ostrich</li>
+          <li class="insect-flying">wasp</li>
+          <li class="bird-flying">sparrow</li>
+          <li class="insect">ant</li>
+        </ul>
+      </div>
+
+      <hr />
+      <footer>
+        <p id="footnote">
+          (*) - Does anyone know exactly what oesterkirche eat? Don't they also
+          eat fish?
+        </p>
+        <img
+          id="ok"
+          src="oesterkirche.jpg"
+          alt="scary oesterkirche, don't get close!"
+        />
+      </footer>
+    </article>
+  </body>
+</html>

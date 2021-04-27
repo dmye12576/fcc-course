@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Transforming video</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header,
+      video,
+      footer,
+      nav {
+        display: block;
+      }
+
+      body {
+        padding: 3em;
+      }
+
+      nav {
+        padding: 0.5em;
+        background: #ccc;
+        border-radius: 5px;
+      }
+
+      h1 {
+        font-size: 20px;
+        margin: 0 0 1em 0;
+        color: #393;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin: 1em 0;
+        color: #363;
+      }
+
+      nav li {
+        display: inline;
+        padding-right: 2em;
+      }
+
+      a {
+        color: #369;
+        font-weight: bold;
+      }
+
+      nav a {
+        color: #333;
+      }
+
+      nav strong {
+        color: #030;
+      }
+
+      footer {
+        font-size: 80%;
+        margin: 5em 0;
+      }
+
+      footer a img {
+        border: none;
+        display: block;
+        margin: 0.5em auto;
+      }
+
+      #stage {
+        background: #eee;
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        margin: 2em 0;
+      }
+
+      #stage span {
+        font-size: 20px;
+        color: #666;
+        display: block;
+        padding: 2em;
+      }
+
+      video {
+        width: 400px;
+        height: 300px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      #controls {
+        position: relative;
+        width: 400px;
+      }
+
+      #change {
+        position: absolute;
+        right: -100px;
+        top: -300px;
+        width: 100px;
+      }
+
+      button {
+        font-size: 150%;
+        text-align: center;
+        display: block;
+      }
+
+      #change button {
+        width: 60px;
+        border: none;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="boundary">
+      <header>
+        <h1>Transforming HTML5 video with CSS3</h1>
+        <h2>
+          If tested in jsbin, please try in standalone mode (clik the small
+          black arrow on the top right of the output tab)
+        </h2>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <strong>Video Player with zoom and rotate</strong>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="stage">
+        <video>
+          <source
+            src="https://www.archive.org/download/AnimatedMechanicalArtPiecesAtMit/P1120973_512kb.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="https://www.archive.org/download/AnimatedMechanicalArtPiecesAtMit/P1120973.ogv"
+            type="video/ogg"
+          />
+          <p>
+            Your browser doesn't support the HTML5 video tag it seems. You can
+            see this video as part of a collection
+            <a
+              href="https://www.archive.org/download/AnimatedMechanicalArtPiecesAtMit/"
+            >
+              at archive.org</a
+            >.
+          </p>
+        </video>
+      </div>
+      <div id="controls"></div>
+      <footer>
+        Written by <a href="http://wait-till-i.com">Chris Heilmann</a>, powered
+        by HTML5 and <a href="http://archive.org">Archive.org</a>
+      </footer>
+    </div>
+    <script>
+      /*
+  Zooming and rotating HTML5 video player
+  Homepage: http://github.com/codepo8/rotatezoomHTML5video
+  Copyright (c) 2011 Christian Heilmann
+  Code licensed under the BSD License:
+  http://wait-till-i.com/license.txt
+*/
+      (function () {
+        /* predefine zoom and rotate */
+        var zoom = 1,
+          rotate = 0;
+
+        /* Grab the necessary DOM elements */
+        var stage = document.getElementById("stage"),
+          v = document.getElementsByTagName("video")[0],
+          controls = document.getElementById("controls");
+
+        /* Array of possible browser specific settings for transformation */
+        var properties = [
+            "transform",
+            "WebkitTransform",
+            "MozTransform",
+            "msTransform",
+            "OTransform",
+          ],
+          prop = properties[0];
+
+        /* Iterators and stuff */
+        var i, j, t;
+
+        /* Find out which CSS transform the browser supports */
+        for (i = 0, j = properties.length; i < j; i++) {
+          if (typeof stage.style[properties[i]] !== "undefined") {
+            prop = properties[i];
+            break;
+          }
+        }
+
+        /* Position video */
+        v.style.left = 0;
+        v.style.top = 0;
+
+        /* If there is a controls element, add the player buttons */
+        /* TODO: why does Opera not display the rotation buttons? */
+        if (controls) {
+          controls.innerHTML =
+            '<button class="play">play</button>' +
+            '<div id="change">' +
+            '<button class="zoomin">+</button>' +
+            '<button class="zoomout">-</button>' +
+            '<button class="left">⇠</button>' +
+            '<button class="right">⇢</button>' +
+            '<button class="up">⇡</button>' +
+            '<button class="down">⇣</button>' +
+            '<button class="rotateleft">&#x21bb;</button>' +
+            '<button class="rotateright">&#x21ba;</button>' +
+            '<button class="reset">reset</button>' +
+            "</div>";
+        }
+
+        /* If a button was clicked (uses event delegation)...*/
+        controls.addEventListener(
+          "click",
+          function (e) {
+            t = e.target;
+            if (t.nodeName.toLowerCase() === "button") {
+              /* Check the class name of the button and act accordingly */
+              switch (t.className) {
+                /* Toggle play functionality and button label */
+                case "play":
+                  if (v.paused) {
+                    v.play();
+                    t.innerHTML = "pause";
+                  } else {
+                    v.pause();
+                    t.innerHTML = "play";
+                  }
+                  break;
+
+                /* Increase zoom and set the transformation */
+                case "zoomin":
+                  zoom = zoom + 0.1;
+                  v.style[prop] =
+                    "scale(" + zoom + ") rotate(" + rotate + "deg)";
+                  break;
+
+                /* Decrease zoom and set the transformation */
+                case "zoomout":
+                  zoom = zoom - 0.1;
+                  v.style[prop] =
+                    "scale(" + zoom + ") rotate(" + rotate + "deg)";
+                  break;
+
+                /* Increase rotation and set the transformation */
+                case "rotateleft":
+                  rotate = rotate + 5;
+                  v.style[prop] =
+                    "rotate(" + rotate + "deg) scale(" + zoom + ")";
+                  break;
+                /* Decrease rotation and set the transformation */
+                case "rotateright":
+                  rotate = rotate - 5;
+                  v.style[prop] =
+                    "rotate(" + rotate + "deg) scale(" + zoom + ")";
+                  break;
+
+                /* Move video around by reading its left/top and altering it */
+                case "left":
+                  v.style.left = parseInt(v.style.left, 10) - 5 + "px";
+                  break;
+                case "right":
+                  v.style.left = parseInt(v.style.left, 10) + 5 + "px";
+                  break;
+                case "up":
+                  v.style.top = parseInt(v.style.top, 10) - 5 + "px";
+                  break;
+                case "down":
+                  v.style.top = parseInt(v.style.top, 10) + 5 + "px";
+                  break;
+
+                /* Reset all to default */
+                case "reset":
+                  zoom = 1;
+                  rotate = 0;
+                  v.style.top = 0 + "px";
+                  v.style.left = 0 + "px";
+                  v.style[prop] =
+                    "rotate(" + rotate + "deg) scale(" + zoom + ")";
+                  break;
+              }
+
+              e.preventDefault();
+            }
+          },
+          false
+        );
+      })();
+    </script>
+  </body>
+</html>

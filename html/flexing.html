@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexbox variable</title>
+    <style>
+      body {
+        margin: 0px;
+      }
+      header,
+      aside,
+      main,
+      section,
+      footer {
+        margin: 10px;
+        padding: 20px;
+        background-color: rgb(218, 221, 202);
+        border-radius: 10px;
+        display: block;
+      }
+      aside {
+        display: block;
+      }
+
+      .fc > * {
+        margin: 10px;
+        padding: 20px;
+      }
+
+      /* initialize flexbox container and flexbox items */
+      .fc {
+        display: flex;
+        flex-flow: column no-wrap;
+      }
+      .fc > * {
+        flex: 1;
+      }
+
+      /* header and footer should be full width */
+      .fc header,
+      .fc footer {
+        margin: 0px;
+        flex: 0 1 100vw;
+        flex: 0 0;
+        color: rgb(19, 17, 17);
+        background-color: rgb(243, 238, 162);
+      }
+
+      /* ensure flex-container is always at least as tall as the viewport.
+           Keeps footer from coming up*/
+      .fc {
+        min-height: 100vh;
+      }
+      .fb > * {
+        flex: 2 0;
+        min-height: calc(100vh / 3);
+        box-sizing: border-box;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="fc">
+      <header>Swanns Way - Overture</header>
+      <article class="fb">
+        <aside>
+          For a long time I used to go to bed early. Sometimes, when I had put
+          out my candle, my eyes would close so quickly that I had not even time
+          to say &quot;I'm going to sleep.&quot; Our five tags will be the
+          flexbox items. They need to be nested in a flexbox container. So we'll
+          surround them with a simple div, since the flexbox container serves no
+          semantic purpose - it is only used to achieve a layout goal, and we'll
+          apply a class to the div so we can easily apply the CSS we want.
+        </aside>
+        <main>
+          And half an hour later the thought that it was time to go to sleep
+          would awaken me; I would try to put away the book which, I imagined,
+          was still in my hands, and to blow out the light; I had been thinking
+          all the time, while I was asleep, of what I had just been reading, but
+          my thoughts had run into a channel of their own, until I myself seemed
+          actually to have become the subject of my book: a church, a quartet,
+          the rivalry between François I and Charles V.
+        </main>
+        <section>
+          <p>
+            This impression would persist for some moments after I was awake; it
+            did not disturb my mind, but it lay like scales upon my eyes and
+            prevented them from registering the fact that the candle was no
+            longer burning.
+          </p>
+          <p>
+            That is a great observation! The flexbox container will manage the
+            header and footer height as a function of managing its vertical
+            space. If you don't want the footer or header to be vertically
+            resized, then the solution is to simply set their height. However,
+            if you do this, you may notice that the flexbox container still
+            gives their row extra height which they simply don't use. So the
+            resulting layout is not optimal.
+          </p>
+        </section>
+        <section>
+          <p>
+            This impression would persist for some moments after I was awake; it
+            did not disturb my mind, but it lay like scales upon my eyes and
+            prevented them from registering the fact that the candle was no
+            longer burning.
+          </p>
+        </section>
+      </article>
+      <footer>by Marcel Proust</footer>
+    </div>
+  </body>
+</html>
