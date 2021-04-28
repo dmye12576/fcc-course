@@ -7,14 +7,14 @@ body {
   margin-left: 6rem;
   margin-right: 6rem;
   text-align: justify;
-  background-color: #685a5a;
+  background-color: #b6aeae;
   color: #ffffff;
 }
 
 h1 {
   text-align: center;
   padding: 2rem;
-  background-color: #30312b;
+  background-color: #555552;
   color: #eee9da;
   margin: 1rem;
   -webkit-box-shadow: 4px 8px 11px 3px #00000063;
@@ -28,7 +28,7 @@ h1 {
 nav {
   font-size: 1.3rem;
   padding: 2rem;
-  background-color: #30312b;
+  background-color: #302c29;
   color: cornsilk;
   margin: 1rem;
   webkit-box-shadow: 4px 8px 11px 3px #00000063;
@@ -102,7 +102,7 @@ figure {
 }
 
 .recipe-box {
-  background-color: #3a362d;
+  background-color: #3d372a;
   padding: 2rem;
   margin: 1rem;
   webkit-box-shadow: 4px 8px 11px 3px #00000063;
