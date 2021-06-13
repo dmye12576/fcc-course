@@ -85,7 +85,7 @@ h2 {
 
 h1 {
   margin-left: 2%;
-  color: #030529;
+  color: #0710b4;
   font-size: 6rem;
 }
 
@@ -117,6 +117,7 @@ img {
   left: 0;
   width: 100%;
   background: var(--main-blue);
+  border-bottom: 4px solid black;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
@@ -159,6 +160,7 @@ img {
   background-image: url(https://images.pexels.com/photos/92904/pexels-photo-92904.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
   background-size: cover;
   background-clip: content-box;
+  border-top: 6px solid black;
 }
 
 .welcome-section > p {
@@ -166,7 +168,7 @@ img {
   font-size: 3rem;
   font-weight: 800;
   font-style: italic;
-  color: rgb(4, 4, 75);
+  color: rgb(146, 144, 7);
 }
 
 /* Projects section */
@@ -174,7 +176,8 @@ img {
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
-  background: var(--main-lightgray);
+  background: rgb(145, 135, 121);
+  border-bottom: 4px var(--main-white);
 }
 
 .projects-section-header {
@@ -211,9 +214,9 @@ img {
 }
 
 .project {
-  background: var(--main-gray);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
+  background: var(--main-blue);
+  box-shadow: 1px 1px 2px rgba(20, 20, 20, 0.5);
+  border-radius: 2%;
 }
 
 .code {
@@ -223,6 +226,9 @@ img {
 
 .project:hover .code {
   color: #ff7f50;
+  transform: scale(1.03);
+  box-shadow: 2px 2px #111;
+  border-radius: 5px;
 }
 
 .project-image {
@@ -235,21 +241,32 @@ img {
   font-size: 2rem;
   padding: 2rem 0.5rem;
 }
+#empty {
+  background: radial-gradient(rgb(102, 161, 238), rgb(1, 6, 80));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.project a {
+  text-decoration: none;
+}
 
 .btn {
   display: inline-block;
   padding: 1rem 2rem;
-  border-radius: 2px;
+  border-radius: 2px solid black;
 }
 
 .btn-show-all {
   font-size: 2rem;
-  background: var(--main-gray);
+  background: var(--main-blue);
   transition: background 0.3s ease-out;
+  border-radius: 2px solid black;
 }
 
 .btn-show-all:hover {
-  background: var(--main-blue);
+  background: var(--main-lightgray);
 }
 
 .btn-show-all:hover > i {
@@ -273,7 +290,8 @@ img {
   width: 100%;
   height: 80vh;
   padding: 0 2rem;
-  background: var(--main-gray);
+  background: var(--main-blue);
+  border-top: 4px solid var(--main-white);
 }
 
 .contact-section-header > h2 {
@@ -317,7 +335,7 @@ footer {
   justify-content: space-evenly;
   padding: 2rem;
   background: var(--main-gray);
-  border-top: 4px solid var(--main-blue);
+  border-top: 4px solid var(--main-white);
 }
 
 footer > p {

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Debt Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h1 class="animated fadeInDown"> Sleep Debt Calculator </h1>
+      </nav>
+      <div class="card-content">
+        <div id="ideal" class="ideal card center">
+          <h5 class="card-title">What is your ideal amount of sleep per day?
+          </h5>
+          <input id="defaultIdealHours" type="button" value="0">
+          <input type="button" value="3">
+          <input type="button" value="4">
+          <input type="button" value="5">
+          <input type="button" value="6">
+          <input type="button" value="7">
+          <input type="button" value="8">
+          <input type="button" value="9">
+          <input type="button" value="10">
+          <ul>
+            <li>
+              <span id="ideal-hours">0</span> hours per day
+      
+            </li>
+            <li>
+              <span id="ideal-hours-week">0</span> hours per week
+      
+            </li>
+          </ul>
+      
+        </div>
+      </div>
+      
+      <div class="wrapper">
+        <h5>What are the actual hours of sleep you get per day?
+          <span id="actual-hours"></span>
+        </h5>
+        <div class="box card">
+          <h5 class="card-title">Sunday:
+            <span class="hours" id="sunday-hours"></span>
+          </h5>
+          <div id="sunday" class="btnHours">
+            <input type="button" value="3">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="10">
+          </div>
+        </div>
+        <div class="box card">
+          <h5 class="card-title">Monday:
+            <span class="hours" id="monday-hours"></span>
+          </h5>
+          <div id="monday" class="btnHours">
+            <input type="button" value="3">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="10">
+          </div>
+        </div>
+        <div class="box card">
+          <h5 class="card-title">Tuesday:
+            <span class="hours" id="tuesday-hours"></span>
+          </h5>
+          <div id="tuesday" class="btnHours">
+            <input type="button" value="3">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="10">
+          </div>
+        </div>
+        <div class="box card">
+          <h5 class="card-title">Wednesday:
+            <span class="hours" id="wednesday-hours"></span>
+          </h5>
+          <div id="wednesday" class="btnHours">
+            <input type="button" value="3">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="10">
+          </div>
+        </div>
+        <div class="box card">
+          <h5 class="card-title">Thursday:
+            <span class="hours" id="thursday-hours"></span>
+          </h5>
+          <div id="thursday" class="btnHours">
+            <input type="button" value="3">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="10">
+           
+          </div>
+        </div>
+        <div class="box card">
+          <h5 class="card-title">Friday:
+            <span class="hours" id="friday-hours"></span>
+          </h5>
+          <div id="friday" class="btnHours">
+           
+            <input type="button" value="3">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="10">
+          </div>
+        </div>
+        <div class="box card">
+          <h5 class="card-title">Saturday:
+            <span class="hours" id="saturday-hours"></span>
+          </h5>
+          <div id="saturday" class="btnHours">
+           
+            <input type="button" value="3">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="10">
+          </div>
+        </div>
+      </div>
+      <div id="calculate">
+        <h2 id="result">
+          </h5>
+          <input id="cal" type="button" value="Calculate">
+      </div>
+      
+    <script src="index.js"></script>
+</body>
+</html>

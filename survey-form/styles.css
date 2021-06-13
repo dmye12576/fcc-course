@@ -1,8 +1,8 @@
 :root {
   --color-white: #f3f3f3;
   --color-cream: #f7f7bd;
-  --color-dark_red: #680d0d;
-  --color-blue: #084de2;
+  --color-orange: #ed502e;
+  --color-light-gray: #979797;
 }
 
 *,
@@ -28,17 +28,6 @@ body::before {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
-  background: var(--color-dark-red);
-  background-image: linear-gradient(
-      115deg,
-      rgba(143, 135, 25, 0.8),
-      rgba(222, 223, 209, 0.7)
-    ),
-    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 h1 {
@@ -74,12 +63,20 @@ textarea {
 }
 
 button {
-  border: none;
+  border: 1px solid white;
+  border-radius: 0.5rem;
 }
 
 .container {
-  width: 100%;
+  width: 100vw;
   margin: 3.125rem auto 0 auto;
+  z-index: -1;
+  background: var(--color-orange);
+  background-image: linear-gradient(125deg, #d7f5e82d, #f1b6a9),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (min-width: 576px) {
@@ -96,7 +93,8 @@ button {
 
 .header {
   padding: 0 0.625rem;
-  margin-bottom: 1.875rem;
+  margin-top: 0%;
+  align-content: center;
 }
 
 .description {
@@ -118,7 +116,12 @@ button {
 /* form */
 
 form {
-  background: var(--color-dark_red);
+  background: var(--color-orange);
+  background-image: linear-gradient(125deg, #d7f5e82d, #ed502e),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 2.5rem 0.625rem;
   border-radius: 0.25rem;
 }
@@ -172,8 +175,9 @@ form {
   display: block;
   width: 100%;
   padding: 0.75rem;
-  background: var(--color-blue);
-  color: inherit;
+  background: var(--color-light-gray);
+  color: #000000;
+  font-weight: 600;
   border-radius: 2px;
   cursor: pointer;
 }

@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header class="header">
+      <h1 id="title" class="text-center">Contact Form</h1>
+      <p id="description" class="description text-center">
+        Please tell us about you.
+      </p>
+    </header>
+
     <div class="container">
-      <header class="header">
-        <h1 id="title" class="text-center">Customer Survey Form</h1>
-        <p id="description" class="description text-center">
-          Thank you for taking the time to help us improve our services.
-        </p>
-      </header>
       <form id="survey-form">
         <div class="form-group">
           <label id="name-label" for="name">Name</label>
@@ -53,13 +54,13 @@
           />
         </div>
         <div class="form-group">
-          <p>Which option best describes your current role?</p>
+          <p>Education Level?</p>
           <select id="dropdown" name="role" class="form-control" required>
-            <option disabled selected value>Select current role</option>
-            <option value="student">Student</option>
-            <option value="job">Full Time Employee</option>
-            <option value="learner">Professional Development</option>
-            <option value="preferNo">Prefer not to say</option>
+            <option disabled selected value>Select education level</option>
+            <option value="student">High school graduate</option>
+            <option value="job">Associate degree - 2 years</option>
+            <option value="learner">Bachelor degree</option>
+            <option value="preferNo">Master degree</option>
             <option value="other">Other</option>
           </select>
         </div>
@@ -95,19 +96,19 @@
         </div>
 
         <div class="form-group">
-          <p>What is your favorite feature of ours?</p>
+          <p>What is your Profession</p>
           <select id="most-like" name="mostLike" class="form-control" required>
             <option disabled selected value>Select an option</option>
-            <option value="challenges">Challenges</option>
-            <option value="projects">Projects</option>
-            <option value="community">Community</option>
-            <option value="openSource">Open Source</option>
+            <option value="challenges">Medical Field</option>
+            <option value="projects">Adminstration</option>
+            <option value="community">Technology</option>
+            <option value="openSource">Sciences</option>
           </select>
         </div>
 
         <div class="form-group">
           <p>
-            What would you like for us to improve?
+            Please give us a brief summary of you career
             <span class="clue">(Check all that apply)</span>
           </p>
 
@@ -164,7 +165,7 @@
         </div>
 
         <div class="form-group">
-          <p>Any comments or suggestions?</p>
+          <p>Please give us a brief summary of you career</p>
           <textarea
             id="comments"
             class="input-textarea"
