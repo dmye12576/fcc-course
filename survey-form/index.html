@@ -1,185 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="header">
-      <h1 id="title" class="text-center">Contact Form</h1>
-      <p id="description" class="description text-center">
-        Please tell us about you.
-      </p>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header class="header">
+			<h1 id="title" class="text-center">Contact Form</h1>
+			<p id="description" class="description text-center">
+				Please tell us about you.
+			</p>
+		</header>
 
-    <div class="container">
-      <form id="survey-form">
-        <div class="form-group">
-          <label id="name-label" for="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            class="form-control"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label id="email-label" for="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="form-control"
-            placeholder="Enter your Email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label id="number-label" for="number"
-            >Age<span class="clue">(optional)</span></label
-          >
-          <input
-            type="number"
-            name="age"
-            id="number"
-            min="10"
-            max="99"
-            class="form-control"
-            placeholder="Age"
-          />
-        </div>
-        <div class="form-group">
-          <p>Education Level?</p>
-          <select id="dropdown" name="role" class="form-control" required>
-            <option disabled selected value>Select education level</option>
-            <option value="student">High school graduate</option>
-            <option value="job">Associate degree - 2 years</option>
-            <option value="learner">Bachelor degree</option>
-            <option value="preferNo">Master degree</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
+		<div class="container">
+			<form id="survey-form">
+				<div class="form-group">
+					<label id="name-label" for="name">Name</label>
+					<input
+						type="text"
+						name="name"
+						id="name"
+						class="form-control"
+						placeholder="Enter your name"
+						required
+					/>
+				</div>
+				<div class="form-group">
+					<label id="email-label" for="email">Email</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						class="form-control"
+						placeholder="Enter your Email"
+						required
+					/>
+				</div>
+				<div class="form-group">
+					<label id="number-label" for="number"
+						>Age<span class="clue">(optional)</span></label
+					>
+					<input
+						type="number"
+						name="age"
+						id="number"
+						min="10"
+						max="99"
+						class="form-control"
+						placeholder="Age"
+					/>
+				</div>
+				<div class="form-group">
+					<p>Education Level?</p>
+					<select id="dropdown" name="role" class="form-control" required>
+						<option disabled selected value>Select education level</option>
+						<option value="student">High school graduate</option>
+						<option value="job">Associate degree - 2 years</option>
+						<option value="learner">Bachelor degree</option>
+						<option value="preferNo">Master degree</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
 
-        <div class="form-group">
-          <p>Would you recommend us to a friend?</p>
-          <label>
-            <input
-              name="user-recommend"
-              value="definitely"
-              type="radio"
-              class="input-radio"
-              checked
-            />Definitely</label
-          >
-          <label>
-            <input
-              name="user-recommend"
-              value="maybe"
-              type="radio"
-              class="input-radio"
-            />Maybe</label
-          >
+				<div class="form-group">
+					<p>Would you recommend us to a friend?</p>
+					<label>
+						<input
+							name="user-recommend"
+							value="definitely"
+							type="radio"
+							class="input-radio"
+							checked
+						/>Definitely</label
+					>
+					<label>
+						<input
+							name="user-recommend"
+							value="maybe"
+							type="radio"
+							class="input-radio"
+						/>Maybe</label
+					>
 
-          <label
-            ><input
-              name="user-recommend"
-              value="not-sure"
-              type="radio"
-              class="input-radio"
-            />Not sure</label
-          >
-        </div>
+					<label
+						><input
+							name="user-recommend"
+							value="not-sure"
+							type="radio"
+							class="input-radio"
+						/>Not sure</label
+					>
+				</div>
 
-        <div class="form-group">
-          <p>What is your Profession</p>
-          <select id="most-like" name="mostLike" class="form-control" required>
-            <option disabled selected value>Select an option</option>
-            <option value="challenges">Medical Field</option>
-            <option value="projects">Adminstration</option>
-            <option value="community">Technology</option>
-            <option value="openSource">Sciences</option>
-          </select>
-        </div>
+				<div class="form-group">
+					<p>What is your Profession</p>
+					<select id="most-like" name="mostLike" class="form-control" required>
+						<option disabled selected value>Select an option</option>
+						<option value="challenges">Medical Field</option>
+						<option value="projects">Adminstration</option>
+						<option value="community">Technology</option>
+						<option value="openSource">Sciences</option>
+					</select>
+				</div>
 
-        <div class="form-group">
-          <p>
-            Please give us a brief summary of you career
-            <span class="clue">(Check all that apply)</span>
-          </p>
+				<div class="form-group">
+					<p>
+						Please give us a brief summary of you career
+						<span class="clue">(Check all that apply)</span>
+					</p>
 
-          <label
-            ><input
-              name="prefer"
-              value="front-end-projects"
-              type="checkbox"
-              class="input-checkbox"
-            />Front-end Projects</label
-          >
-          <label>
-            <input
-              name="prefer"
-              value="back-end-projects"
-              type="checkbox"
-              class="input-checkbox"
-            />Back-end Projects</label
-          >
-          <label
-            ><input
-              name="prefer"
-              value="data-visualization"
-              type="checkbox"
-              class="input-checkbox"
-            />Data Visualization</label
-          >
-          <label
-            ><input
-              name="prefer"
-              value="challenges"
-              type="checkbox"
-              class="input-checkbox"
-            />Challenges</label
-          >
+					<label
+						><input
+							name="prefer"
+							value="front-end-projects"
+							type="checkbox"
+							class="input-checkbox"
+						/>Front-end Projects</label
+					>
+					<label>
+						<input
+							name="prefer"
+							value="back-end-projects"
+							type="checkbox"
+							class="input-checkbox"
+						/>Back-end Projects</label
+					>
+					<label
+						><input
+							name="prefer"
+							value="data-visualization"
+							type="checkbox"
+							class="input-checkbox"
+						/>Data Visualization</label
+					>
+					<label
+						><input
+							name="prefer"
+							value="challenges"
+							type="checkbox"
+							class="input-checkbox"
+						/>Challenges</label
+					>
 
-          <label
-            ><input
-              name="prefer"
-              value="videos"
-              type="checkbox"
-              class="input-checkbox"
-            />Videos</label
-          >
+					<label
+						><input
+							name="prefer"
+							value="videos"
+							type="checkbox"
+							class="input-checkbox"
+						/>Videos</label
+					>
 
-          <label
-            ><input
-              name="prefer"
-              value="forum"
-              type="checkbox"
-              class="input-checkbox"
-            />Forum</label
-          >
-        </div>
+					<label
+						><input
+							name="prefer"
+							value="forum"
+							type="checkbox"
+							class="input-checkbox"
+						/>Forum</label
+					>
+				</div>
 
-        <div class="form-group">
-          <p>Please give us a brief summary of you career</p>
-          <textarea
-            id="comments"
-            class="input-textarea"
-            name="comment"
-            placeholder="Enter your comment here..."
-          ></textarea>
-        </div>
+				<div class="form-group">
+					<p>Please give us a brief summary of you career</p>
+					<textarea
+						id="comments"
+						class="input-textarea"
+						name="comment"
+						placeholder="Enter your comment here..."
+					></textarea>
+				</div>
 
-        <div class="form-group">
-          <button type="submit" id="submit" class="submit-button">
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
-  </body>
+				<div class="form-group">
+					<button type="submit" id="submit" class="submit-button">
+						Submit
+					</button>
+				</div>
+			</form>
+		</div>
+	</body>
 </html>
