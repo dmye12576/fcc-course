@@ -8,13 +8,13 @@
 
 body {
 	height: 100vh;
-	background: #13b30d;
+	background: #f8910a;
 }
 
 .container {
 	background-color: #ffffff;
-	width: 500px;
-	height: 350px;
+	width: 100vw;
+	height: 100vh;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	left: 50%;
@@ -30,8 +30,8 @@ body {
 
 img {
 	position: relative;
-	width: 460px;
-	height: 280px;
+	width: 100%vw;
+	height: 100vh;
 	display: none;
 }
 
